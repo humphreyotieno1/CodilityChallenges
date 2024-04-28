@@ -1,0 +1,17 @@
+1. Read the sequence
+2. Increment a counter variable for each zero digit
+3. Reset the counter every time I reach a '1' digit
+4. Compare zero counter with the current max value
+
+shorter solution
+def solution(N):
+    N = bin(N)[2:]
+    n = 0
+    maxb = 0
+    for k in N:
+        if int(k) == 0:
+            b += 1
+        elif int(k) == 1:
+            maxb = max(b, maxb)
+            b = 0
+    return maxb
